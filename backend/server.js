@@ -38,6 +38,7 @@ function parseId(req, res) {
   return id;
 }
 
+app.get('/', (req, res) => res.json({ message: 'Taskly API is running. Try GET /api/tasks' }));
 app.get('/api/health', (req, res) => res.json({ ok: true }));
 
 // GET /api/tasks?status=Pending&priority=High
